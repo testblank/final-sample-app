@@ -1,11 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-<<<<<<< Updated upstream
-import { loginApi, logoutApi } from '@/api/loginApi/loginApi';
-import { loginActions } from '@/redux/login/loginSaga';
-=======
 import { loginApi, logoutApi } from '@api/loginApi/loginApi';
 import { loginActions } from '@redux/login/loginSlice';
->>>>>>> Stashed changes
 
 function* loginSaga(action) {
     try {
