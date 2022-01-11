@@ -1,9 +1,9 @@
-import CommonApi from '@/api/CommonApi';
+import CommonApi from '@api/CommonApi';
 
 export const loginApi = (param) => {
     return CommonApi({
         url: '/users',
-        method: 'GET',
+        method: 'get',
     });
 };
 

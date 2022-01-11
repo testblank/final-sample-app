@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { loginActions } from '@/redux/reducer/login/loginSlice';
+import { loginActions } from '@redux/login/loginSlice';
 
 const useLogin = () => {
     const loginData = useSelector((state) => state.login);
