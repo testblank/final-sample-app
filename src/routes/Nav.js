@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
+import envUtil from "@utils/envUtil"
 
 const navStyle = {
   width: "150px",
@@ -7,6 +8,11 @@ const navStyle = {
 }
 
 const Nav = () => {
+
+    if (envUtil.getEnvByKey("REACT_APP_NAV") !== "true") {
+      return <></>;
+    }
+
     return (
         <nav style={navStyle}>
           <ul>
