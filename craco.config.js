@@ -1,5 +1,3 @@
-// import {path} from 'path';
-
 const path = require('path');
 
 module.exports = {
@@ -7,7 +5,8 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src/'),
       '@components': path.resolve(__dirname, 'src/components'),
-      '@views': path.resolve(__dirname, 'src/views'),
+      '@api': path.resolve(__dirname, 'src/api'),
+      '@redux': path.resolve(__dirname, 'src/redux'),
     },
   },
 };
