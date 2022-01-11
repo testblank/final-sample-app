@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <Nav />
       <RootRoute />
-      <div className='text-green-600'>sdjflasjdflidsajflia</div>
     </div>
   );
 }
