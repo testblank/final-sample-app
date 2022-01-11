@@ -7,5 +7,5 @@ npm ci
 scripts
 ```
 npm start
-npm storybook
+npm run storybook
 ```
