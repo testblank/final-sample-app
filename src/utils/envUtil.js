@@ -1,18 +1,20 @@
+import { isNil, isString, isUndefined } from 'lodash-es';
+
 function getEnvByKey(key) {
-	if (process === undefined || process === null) {
+	if (isNil(process)) {
 		throw new Error('process 존재하지 않음.');
 	}
 
-	if (process.env === undefined || process.env === null) {
+	if (isNil(process.env)) {
 		throw new Error('process.env 존재하지 않음.');
 	}
 
-	if (key === undefined || key === null || key === '') {
-		return null;
+	if (isNil(key) && !isString(key)) {
+		return '';
 	}
 
-	if (process.env[key] === undefined) {
-		throw new Error(`"process.env.${key}" 존재하지 않음.`);
+	if (isUndefined(process.env[key])) {
+		return '';
 	}
 
 	return process.env[key];

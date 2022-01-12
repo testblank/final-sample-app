@@ -1,5 +1,7 @@
+import { isNil, isString, isNull } from 'lodash-es';
+
 function isDefinedLocalStorage() {
-	if (localStorage === undefined || localStorage === null) {
+	if (isNil(localStorage)) {
 		return false;
 	}
 	return true;
@@ -10,8 +12,12 @@ function getItem(key, defaultValue) {
 		throw new Error('localStorage 존재하지 않음.');
 	}
 
+	if (isNil(key) || !isString(key)) {
+		return '';
+	}
+
 	const returnValue = localStorage.getItem(key);
-	if (returnValue === null) {
+	if (isNull(returnValue)) {
 		return defaultValue;
 	}
 	return returnValue;
@@ -22,12 +28,20 @@ function setItem(key, value) {
 		throw new Error('localStorage 존재하지 않음.');
 	}
 
+	if (isNil(key) || !isString(key)) {
+		return;
+	}
+
 	localStorage.setItem(key, value);
 }
 
 function removeItem(key) {
 	if (isDefinedLocalStorage() === false) {
 		throw new Error('localStorage 존재하지 않음.');
+	}
+
+	if (isNil(key) || !isString(key)) {
+		return;
 	}
 
 	localStorage.removeItem(key);
