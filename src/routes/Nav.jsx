@@ -1,11 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-// import envUtil from '@utils/envUtil';
-
-// const navStyle = {
-// 	width: '150px',
-// 	textAlign: 'left',
-// };
+import envUtil from '@utils/envUtil';
 
 const initailPathList = [
 	{
@@ -46,15 +41,10 @@ const Nav = () => {
 		setPathList(initailPathList);
 	}, [initailPathList]);
 
-	// React.useEffect(() => {
-	// 	if (!envUtil.getEnvByKey('REACT_APP_NAV')) {
-	// 		setEnvCheck(false);
-	// 	}
-	// }, []);
-
-	// if (!envCheck) {
-	// 	return null;
-	// }
+	React.useEffect(() => {
+		console.log(`
+		envUtil.REACT_APP_TEST = ${envUtil.getEnvByKey('REACT_APP_TEST')}`);
+	}, []);
 
 	return (
 		<nav className="flex justify-between items-center max-w-md px-3">
