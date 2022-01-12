@@ -1,3 +1,3 @@
 import BaseImage from './BaseImage';
 
-export { BaseImage };
+export default BaseImage;

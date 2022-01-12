@@ -7,13 +7,10 @@ import useLogin from '@hooks/useLogin';
 const GuestAuth = ({ children }) => {
 	const location = useLocation();
 	const [loginData, login] = useLogin();
-	// const [state, setState] = useState(loginData);
 
 	useEffect(() => {
 		login();
 	}, []);
-
-	console.log(loginData.userInfo);
 
 	if (loginData.userInfo) {
 		return children;

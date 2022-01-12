@@ -10,7 +10,7 @@ const middlewares = [sagaMiddleware, logger];
 
 const store = configureStore({
 	reducer: rootReducer,
-	middleware: (getDefaultMiddleware) =>
+	middleware: getDefaultMiddleware =>
 		getDefaultMiddleware({ thunk: false }).concat(...middlewares),
 	// devTools: process.env.NODE_ENV !== 'production',
 });

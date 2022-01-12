@@ -1,3 +1,3 @@
 import CardAccordion from './CardAccordion';
 
-export { CardAccordion };
+export default CardAccordion;

@@ -1,3 +1,3 @@
 import TitleBox from './TitleBox';
 
-export { TitleBox };
+export default TitleBox;
