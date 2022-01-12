@@ -18,4 +18,5 @@ const LoginButton = () => {
 		</div>
 	);
 };
+
 export default LoginButton;

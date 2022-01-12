@@ -17,6 +17,7 @@ function getItem(key, defaultValue) {
 	}
 
 	const returnValue = localStorage.getItem(key);
+
 	if (isNull(returnValue)) {
 		return defaultValue;
 	}

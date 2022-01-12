@@ -1,3 +1,3 @@
 import CardModuleThumb from './CardModuleThumb';
 
-export { CardModuleThumb };
+export default CardModuleThumb;

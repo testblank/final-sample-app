@@ -1,15 +1,13 @@
 import React from 'react';
-import './App.css';
 import Nav from '@routes/Nav';
 import RootRoute from '@routes/RootRoute';
+import './App.css';
 
-const App = () => {
-	return (
-		<div className="App">
-			<Nav />
-			<RootRoute />
-		</div>
-	);
-};
+const App = () => (
+	<div className="App">
+		<Nav />
+		<RootRoute />
+	</div>
+);
 
 export default App;
