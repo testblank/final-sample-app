@@ -24,5 +24,7 @@ module.exports = {
 		],
 		// ? for reducer immer.js
 		'no-param-reassign': 0,
+		// ? Delete `␍`  관련 에러 해결
+		'prettier/prettier': ['error', { endOfLine: 'auto' }],
 	},
 };
