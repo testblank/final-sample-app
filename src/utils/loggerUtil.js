@@ -10,34 +10,17 @@ const level = levels.info;
 const timeMap = new Map();
 
 const styles = {
-	info: [
-		'color: green',
-		'background: white',
-		'font-size: 10px',
-		'border: 1px solid gray',
-		'padding: 1px',
-	].join(';'),
+	info: ['color: green', 'background: white', 'font-size: 10px', 'border: 1px solid gray', 'padding: 1px'].join(';'),
 
-	warn: [
-		'color: orange',
-		'background: white',
-		'font-size: 11px',
-		'border: 1px solid orange',
-		'padding: 2px',
-	].join(';'),
+	warn: ['color: orange', 'background: white', 'font-size: 11px', 'border: 1px solid orange', 'padding: 2px'].join(';'),
 
-	error: [
-		'color: red',
-		'background: white',
-		'font-size: 13px',
-		'border: 1px solid red',
-		'padding: 2px',
-	].join(';'),
+	error: ['color: red', 'background: white', 'font-size: 13px', 'border: 1px solid red', 'padding: 2px'].join(';'),
 };
 
 function printLog(msg, obj, style) {
 	if (isObject(obj)) {
 		const unique = uniqueId();
+
 		console.group(unique);
 		console.log(`%c${msg}`, style);
 		console.log(obj);

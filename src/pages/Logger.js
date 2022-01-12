@@ -6,12 +6,14 @@ const Logger = () => {
 	const [count, setCount] = useState(0);
 
 	const name = 'Logger';
+
 	useLogger(name, [count]);
 	const handleClickCount = () => {
 		setCount(count + 1);
 	};
 
 	const timeKey = 'test';
+
 	loggerUtil.time(timeKey);
 	const handleClickSeconds = () => {
 		loggerUtil.timeEnd(timeKey);
