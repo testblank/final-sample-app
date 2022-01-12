@@ -1,9 +1,10 @@
 {
-  "recommendations": [
-    "dbaeumer.vscode-eslint", 
-    "esbenp.prettier-vscode", 
-    "eamodio.gitlens",
-    "aaron-bond.better-comments",
-    "cssho.vscode-svgviewer",
-  ]
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"eamodio.gitlens",
+		"aaron-bond.better-comments",
+		"cssho.vscode-svgviewer",
+		"mhutchie.git-graph"
+	]
 }
