@@ -1,5 +1,9 @@
 import { isNil, isString, isUndefined } from 'lodash-es';
 
+/**
+ * import envUtil from '@utils/envUtil';
+ * const testEnv = ${envUtil.getEnvByKey('REACT_APP_TEST');
+ */
 function getEnvByKey(key) {
 	if (isNil(process)) {
 		throw new Error('process 존재하지 않음.');
