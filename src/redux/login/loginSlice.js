@@ -10,7 +10,7 @@ const loginSlice = createSlice({
 	name: 'login',
 	initialState,
 	reducers: {
-		loginRequest: (state) => {
+		loginRequest: state => {
 			state.loading = true;
 			state.error = null;
 		},
@@ -22,11 +22,11 @@ const loginSlice = createSlice({
 			state.loading = false;
 			state.error = action.payload;
 		},
-		logoutRequest: (state) => {
+		logoutRequest: state => {
 			state.loading = true;
 			state.error = null;
 		},
-		logoutSuccess: (state) => {
+		logoutSuccess: state => {
 			state.loading = false;
 			state.userInfo = null;
 		},

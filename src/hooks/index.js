@@ -8,12 +8,12 @@ import useWindowSize from './useWindowSize';
 import useClientRect from './useClientRect';
 
 export {
-  // useCheckBox,
-  useCheckTree,
-  useTextInput,
-  useRadioButton,
-  useSelect,
-  useSwitch,
-  useWindowSize,
-  useClientRect,
+	// useCheckBox,
+	useCheckTree,
+	useTextInput,
+	useRadioButton,
+	useSelect,
+	useSwitch,
+	useWindowSize,
+	useClientRect,
 };

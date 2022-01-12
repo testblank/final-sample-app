@@ -7,11 +7,11 @@ import SampleModal from './SampleModal';
 import SampleMain from './SampleMain';
 
 export {
-  SampleHome,
-  SampleJoin,
-  SampleJoin2,
-  SampleTerms,
-  SampleModal,
-  SampleSettings,
-  SampleMain,
+	SampleHome,
+	SampleJoin,
+	SampleJoin2,
+	SampleTerms,
+	SampleModal,
+	SampleSettings,
+	SampleMain,
 };

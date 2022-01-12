@@ -6,8 +6,9 @@ export const DATE_FORMAT = {
 Object.freeze(DATE_FORMAT);
 
 // num: number
-export const numberToString = (num) => {
+export const numberToString = num => {
 	const numString = `${num}`;
+
 	return numString.length < 2 ? `0${numString}` : numString;
 };
 

@@ -1,15 +1,16 @@
 import { useState } from 'react';
 
-const useSelect = (options) => {
-  const [selected, setSelected] = useState(options[0].id);
+const useSelect = options => {
+	const [selected, setSelected] = useState(options[0].id);
 
-  const onChangeSelect = (e) => {
-    console.log(e.target.value);
-    const targetValue = e.target.value || '';
-    setSelected(targetValue);
-  };
+	const onChangeSelect = e => {
+		console.log(e.target.value);
+		const targetValue = e.target.value || '';
 
-  return [selected, onChangeSelect];
+		setSelected(targetValue);
+	};
+
+	return [selected, onChangeSelect];
 };
 
 export default useSelect;

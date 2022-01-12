@@ -10,4 +10,5 @@ scripts
 npm start
 npm run storybook
 npm run lint
+npm run lint -- --fix
 ```

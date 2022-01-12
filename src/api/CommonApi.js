@@ -6,28 +6,28 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use(
-	(config) => {
+	config =>
 		// 요청 바로 직전 axios 설정값에 대해 작성합니다.
 		// console.log('config', config);
-		return config;
-	},
-	(error) => {
+		config
+	,
+	error =>
 		// 요청 에러 처리를 작성합니다.
 		// console.log('error', error);
-		return Promise.reject(error);
-	},
+		Promise.reject(error)
+	,
 );
 
 instance.interceptors.response.use(
-	(response) => {
+	response =>
 		// console.log('response', response);
-		return response;
-	},
+		response
+	,
 
-	(error) => {
+	error =>
 		// console.log('error', error);
-		return Promise.reject(error);
-	},
+		Promise.reject(error)
+	,
 );
 
 export default instance;

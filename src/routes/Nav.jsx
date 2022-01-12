@@ -2,32 +2,26 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import envUtil from '@utils/envUtil';
 
-const initailPathList = [
+const initialPathList = [
 	{
 		path: '/',
 		value: 'home',
-	},
-	{
+	}, {
 		path: '/login',
 		value: 'login',
-	},
-	{
+	}, {
 		path: '/logout',
 		value: 'logout',
-	},
-	{
+	}, {
 		path: '/context',
 		value: 'context',
-	},
-	{
+	}, {
 		path: '/conf',
 		value: 'conf',
-	},
-	{
+	}, {
 		path: '/logger',
 		value: 'logger',
-	},
-	{
+	}, {
 		path: '/error',
 		value: 'error',
 	},
@@ -35,11 +29,11 @@ const initailPathList = [
 
 const Nav = () => {
 	// const [envCheck, setEnvCheck] = React.useState(false);
-	const [pathList, setPathList] = React.useState(initailPathList);
+	const [pathList, setPathList] = React.useState(initialPathList);
 
 	React.useEffect(() => {
-		setPathList(initailPathList);
-	}, [initailPathList]);
+		setPathList(initialPathList);
+	}, [initialPathList]);
 
 	React.useEffect(() => {
 		console.log(`
@@ -47,10 +41,10 @@ const Nav = () => {
 	}, []);
 
 	return (
-		<nav className="flex justify-between items-center max-w-md px-3">
+		<nav className="flex justify-between items-center w-full px-3 h-16">
 			{pathList &&
 				pathList.length > 0 &&
-				pathList.map((item) => (
+				pathList.map(item => (
 					<Link key={`${item.path}`} to={item.path}>
 						{item.value}
 					</Link>
