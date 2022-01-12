@@ -8,24 +8,24 @@ const instance = axios.create({
 instance.interceptors.request.use(
 	(config) => {
 		// 요청 바로 직전 axios 설정값에 대해 작성합니다.
-		console.log('config', config);
+		// console.log('config', config);
 		return config;
 	},
 	(error) => {
 		// 요청 에러 처리를 작성합니다.
-		console.log('error', error);
+		// console.log('error', error);
 		return Promise.reject(error);
 	},
 );
 
 instance.interceptors.response.use(
 	(response) => {
-		console.log('response', response);
+		// console.log('response', response);
 		return response;
 	},
 
 	(error) => {
-		console.log('error', error);
+		// console.log('error', error);
 		return Promise.reject(error);
 	},
 );
