@@ -1,11 +1,13 @@
+import React from 'react';
+
 import {
 	SampleJoin,
-	// SampleJoin2,
-	// SampleTerms,
-	// SampleSettings,
-	// SampleMain,
-} from 'pages';
-import 'style/index.css';
+	SampleJoin2,
+	SampleTerms,
+	SampleSettings,
+	SampleMain,
+} from 'sample-pages';
+import 'styles/index.css';
 
 export default {
 	title: 'Page/SamplePages',

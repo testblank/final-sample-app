@@ -1,4 +1,4 @@
-import { useWindowSize } from 'customHooks';
+import { useWindowSize } from '@hooks';
 import { arrayOf, element } from 'prop-types';
 import { number } from 'prop-types';
 

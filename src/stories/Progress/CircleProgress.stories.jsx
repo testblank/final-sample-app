@@ -1,25 +1,25 @@
-import CircleProgress from 'components/progress/CircleProgress';
+import React from 'react';
+
+import CircleProgress from '@components/progress/CircleProgress';
 
 export default {
-  title: 'Component/Progress/CircleProgress',
-  component: CircleProgress,
+	title: 'Component/Progress/CircleProgress',
+	component: CircleProgress,
 };
 
-const Template = (args) => {
-  return <CircleProgress {...args} />;
-};
+const Template = args => <CircleProgress {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  type: 'primary',
+	type: 'primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  type: 'secondary',
+	type: 'secondary',
 };
 
 export const Success = Template.bind({});
 Success.args = {
-  type: 'success',
+	type: 'success',
 };

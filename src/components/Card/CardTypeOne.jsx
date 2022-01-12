@@ -10,7 +10,7 @@ import {
   bool,
   object,
 } from 'prop-types';
-import { BaseCardPublish } from 'publish/Card';
+import { BaseCardPublish } from '@publish/Card';
 import { CardModuleThumb } from './Module';
 
 const CardTypeOne = ({

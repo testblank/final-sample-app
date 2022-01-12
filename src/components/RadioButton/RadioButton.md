@@ -6,21 +6,21 @@
 ## _usage_
 
 ```tsx
-import { RadioButton } from 'components/RadioButton';
+import { RadioButton } from '@components/RadioButton';
 
 const list = [
-  {
-    id: 0, // number
-    text: 'first radio text',
-    selected: true,
-    disabled: false,
-  },
-  {
-    id: 1,
-    text: 'second radio text',
-    selected: false,
-    disabled: false,
-  },
+    {
+        id: 0, // number
+        text: 'first radio text',
+        selected: true,
+        disabled: false,
+    },
+    {
+        id: 1,
+        text: 'second radio text',
+        selected: false,
+        disabled: false,
+    },
 ];
 
 return <RadioButton list={list} />;
@@ -41,29 +41,29 @@ return <RadioButton list={list} />;
 
 ```jsx
 import { RadioButtonPublish } from 'publish';
-import { useRadioButton } from 'customHooks';
+import { useRadioButton } from '@hooks';
 
 const RadioButton = ({ list }) => {
-  const [selectedId, onClickRadioBtn] = useRadioButton(list);
+    const [selectedId, onClickRadioBtn] = useRadioButton(list);
 
-  return (
-    <>
-      {list &&
-        list.length > 0 &&
-        list.map((item, idx) => {
-          return (
-            <RadioButtonPublish
-              key={`${item.id}_${idx}`}
-              id={item.id}
-              disabled={item.disabled}
-              selectedId={selectedId}
-              text={item.text}
-              onClick={() => onClickRadioBtn(item.id)}
-            />
-          );
-        })}
-    </>
-  );
+    return (
+        <>
+            {list &&
+                list.length > 0 &&
+                list.map((item, idx) => {
+                    return (
+                        <RadioButtonPublish
+                            key={`${item.id}_${idx}`}
+                            id={item.id}
+                            disabled={item.disabled}
+                            selectedId={selectedId}
+                            text={item.text}
+                            onClick={() => onClickRadioBtn(item.id)}
+                        />
+                    );
+                })}
+        </>
+    );
 };
 
 export default RadioButton;

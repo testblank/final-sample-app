@@ -1,8 +1,8 @@
 import React from 'react';
 import { bool, element, func, number, oneOf, string } from 'prop-types';
 
-import PrimaryInputPublish from 'publish/PrimaryInputPublish2';
-import { useTextInput } from 'customHooks';
+import PrimaryInputPublish from '@publish/PrimaryInputPublish2';
+import { useTextInput } from '@hooks';
 
 const BaseInput = (props) => {
   const [value, onChange, onClickReset] = useTextInput();

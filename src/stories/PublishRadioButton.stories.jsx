@@ -1,7 +1,9 @@
-import { RadioButton } from 'components/RadioButton';
-// import { radioList } from 'data/mockup';
+import React from 'react';
 
-import 'style/index.css';
+import { RadioButton } from '@components/RadioButton';
+// import { radioList } from '@data/mockup';
+
+import 'styles/index.css';
 
 export default {
 	title: 'Component/RadioButton',

@@ -4,13 +4,13 @@ page마다 동일한 layout을 가질 수 있도록 빈 layout을 만들고 재�
 
 usePageLayout은
 
-- [**renderPage**](#render-page)
-- **openPopup**
-- **closePopup**
-- **openSheet**
-- **closeSheet**
-- **openDrawer**
-- **closeDrawer**
+-   [**renderPage**](#render-page)
+-   **openPopup**
+-   **closePopup**
+-   **openSheet**
+-   **closeSheet**
+-   **openDrawer**
+-   **closeDrawer**
 
 총 7개 함수를 return합니다.
 
@@ -18,9 +18,9 @@ usePageLayout은
 
 ```jsx
 import { Appbar, usePageLayout } from 'layout';
-import { Popup } from 'modal/Popup';
-import { Sheet } from 'modal/Sheet';
-import { Drawer } from 'modal/Drawer';
+import { Popup } from '@components/modal/Popup';
+import { Sheet } from '@components/modal/Sheet';
+import { Drawer } from '@components/modal/Drawer';
 
 const SamplePage = () => {
 
@@ -110,25 +110,25 @@ render하고싶은 element를 넣어주면 됩니다.
 
 ```jsx
 const DrawerWrapper = (children) => {
-  //SheetWrapper | PopupWrapper
-  const { drawerState } = useSelector((state) => state.modalReducer);
-  // sheetState, popupState
-  const el = document.getElementById('drawer-root');
-  //'sheet-root' | 'popup-root'
-  const comp = React.cloneElement(children);
+    //SheetWrapper | PopupWrapper
+    const { drawerState } = useSelector((state) => state.modalReducer);
+    // sheetState, popupState
+    const el = document.getElementById('drawer-root');
+    //'sheet-root' | 'popup-root'
+    const comp = React.cloneElement(children);
 
-  if (!el) {
-    const newNode = document.createElement('div');
-    newNode.setAttribute('id', 'drawer-root');
-    const rootNode = document.getElementById('#root');
-    rootNode.after(newNode);
-  }
+    if (!el) {
+        const newNode = document.createElement('div');
+        newNode.setAttribute('id', 'drawer-root');
+        const rootNode = document.getElementById('#root');
+        rootNode.after(newNode);
+    }
 
-  if (!drawerState) {
-    return null;
-  }
+    if (!drawerState) {
+        return null;
+    }
 
-  return ReactDOM.createPortal(comp, el);
+    return ReactDOM.createPortal(comp, el);
 };
 ```
 
@@ -149,50 +149,50 @@ export const SHEET_STATE = 'SHEET_STATE';
 export const DRAWER_STATE = 'DRAWER_STATE';
 
 export const setPopupState = (popupState) => ({
-  type: POPUP_STATE,
-  popupState,
+    type: POPUP_STATE,
+    popupState,
 });
 
 export const setSheetState = (sheetState) => ({
-  type: SHEET_STATE,
-  sheetState,
+    type: SHEET_STATE,
+    sheetState,
 });
 
 export const setDrawerState = (drawerState) => ({
-  type: DRAWER_STATE,
-  drawerState,
+    type: DRAWER_STATE,
+    drawerState,
 });
 
 // initial state 초기값은 false입니다.
 
 const initialState = {
-  popupState: false,
-  sheetState: false,
-  drawerState: false,
+    popupState: false,
+    sheetState: false,
+    drawerState: false,
 };
 
 // 각 modal의 state를 변화 시켜줄 reducer입니다.
 export const modalReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case POPUP_STATE:
-      return {
-        ...state,
-        popupState: action.popupState,
-      };
-    case SHEET_STATE:
-      return {
-        ...state,
-        sheetState: action.sheetState,
-      };
-    case DRAWER_STATE:
-      return {
-        ...state,
-        drawerState: action.drawerState,
-      };
+    switch (action.type) {
+        case POPUP_STATE:
+            return {
+                ...state,
+                popupState: action.popupState,
+            };
+        case SHEET_STATE:
+            return {
+                ...state,
+                sheetState: action.sheetState,
+            };
+        case DRAWER_STATE:
+            return {
+                ...state,
+                drawerState: action.drawerState,
+            };
 
-    default:
-      return state;
-  }
+        default:
+            return state;
+    }
 };
 ```
 
@@ -201,9 +201,7 @@ useSelector, useDispatch를 사용합니다.
 
 ```jsx
 // useSelector
-const { popupState, sheetState, drawerState } = useSelector(
-  (state) => state.modalReducer,
-);
+const { popupState, sheetState, drawerState } = useSelector((state) => state.modalReducer);
 
 // setDrawerState action을 dispatch하는 예시
 const dispatch = useDispatch();
@@ -216,15 +214,15 @@ dispatch(setDrawerState(true));
 
 ```jsx
 const ExampleComponent = () => {
-  const dispatch = useDispatch();
-  const { drawerState } = useSelector((state) => state.modalReducer);
+    const dispatch = useDispatch();
+    const { drawerState } = useSelector((state) => state.modalReducer);
 
-  return (
-    <div>
-      <div onClick={() => dispatch(setDrawerState(true))} />
-      {drawerState && <Drawer />}
-    </div>
-  );
+    return (
+        <div>
+            <div onClick={() => dispatch(setDrawerState(true))} />
+            {drawerState && <Drawer />}
+        </div>
+    );
 };
 ```
 

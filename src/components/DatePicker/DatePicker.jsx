@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Sheet } from 'modal/Sheet';
+import { Sheet } from '@components/modal/Sheet';
 import { DatePickerPublish } from 'publish';
 import { setSheetState } from 'redux/reducers/modalReducer';
-import DatePickerModalPublish from 'publish/DatePickerModalPublish';
+import DatePickerModalPublish from '@publish/DatePickerModalPublish';
 
 const DatePicker = ({
   initialRegDate = Date.now(),

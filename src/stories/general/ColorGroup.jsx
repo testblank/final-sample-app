@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _config from '../../config/tailwindConfig';
 
 export const Color = ({ type, number, colorValue }) => (
@@ -8,6 +9,12 @@ export const Color = ({ type, number, colorValue }) => (
 		<p className={`text-xs w-full`}>{colorValue}</p>
 	</>
 );
+
+Color.propTypes = {
+	type: PropTypes.string,
+	number: PropTypes.string,
+	colorValue: PropTypes.string,
+};
 
 export const ColorGroup = () => {
 	const keys = Object.keys(_config.colors).filter(color => color !== 'white');

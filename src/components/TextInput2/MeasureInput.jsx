@@ -1,6 +1,6 @@
-import { useTextInput } from 'customHooks';
+import { useTextInput } from '@hooks';
 import { bool, element, func, number, oneOf, string } from 'prop-types';
-import PrimaryInputPublish from 'publish/PrimaryInputPublish2';
+import PrimaryInputPublish from '@publish/PrimaryInputPublish2';
 
 const MeasureInput = (props) => {
   const { measureUnit } = props;

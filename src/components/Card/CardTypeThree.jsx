@@ -1,5 +1,5 @@
 import { bool, func, object, oneOfType, string } from 'prop-types';
-import { BaseCardPublish } from 'publish/Card';
+import { BaseCardPublish } from '@publish/Card';
 import React from 'react';
 
 const CardTypeThree = ({

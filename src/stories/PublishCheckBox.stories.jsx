@@ -1,6 +1,8 @@
-import { CheckBox } from 'components/CheckBox2';
-import { useCheckTree } from 'customHooks';
-import 'style/index.css';
+import React from 'react';
+
+import { CheckBox } from '@components/CheckBox2';
+import { useCheckTree } from '@hooks';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/CheckBox',

@@ -1,5 +1,7 @@
-import { Switch } from 'components/Switch';
-import 'style/index.css';
+import React from 'react';
+
+import { Switch } from '@components/Switch';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/Switch',

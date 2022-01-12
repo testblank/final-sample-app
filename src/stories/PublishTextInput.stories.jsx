@@ -1,14 +1,15 @@
+import React from 'react';
 import {
 	BaseInput,
-	// MeasureInput,
-	// SecretInput,
-	// FunctionInput,
-	// EmailInput,
-	// SecretNumberInput,
-} from 'components/TextInput';
-import { emailDomain } from 'data/mockup';
+	MeasureInput,
+	SecretInput,
+	FunctionInput,
+	EmailInput,
+	SecretNumberInput,
+} from '@components/TextInput';
+import { emailDomain } from '@data/mockup';
 
-import 'style/index.css';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/TextInput',

@@ -1,12 +1,8 @@
-import {
-	BaseCard,
-	// CardTypeOne,
-	// CardTypeThree,
-	// CardTypeTwo,
-	// CardTypeFour,
-} from 'components/Card';
-import { svgIconHN, svgIconKB, svgIconSH } from 'res/svg';
-import 'style/index.css';
+import React from 'react';
+
+import { BaseCard, CardTypeOne, CardTypeThree, CardTypeTwo, CardTypeFour } from '@components/Card';
+import { svgIconHN, svgIconKB, svgIconSH } from '@res/svg';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/Card',

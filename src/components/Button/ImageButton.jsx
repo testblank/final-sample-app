@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageButtonPublish from 'publish/ImageButtonPublish';
+import ImageButtonPublish from '@publish/ImageButtonPublish';
 import debounce from 'util/debounce';
 
 const ImageButton = (props) => {

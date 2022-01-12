@@ -1,5 +1,5 @@
-import { useTextInput } from 'customHooks';
-// import PrimaryInputPublish from 'publish/PrimaryInputPublish2';
+import { useTextInput } from '@hooks';
+// import PrimaryInputPublish from '@publish/PrimaryInputPublish2';
 
 const SecretNumberInput = props => {
 	const [birthValue, onChangeBirthValue, captionBirthText] = useTextInput(

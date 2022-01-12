@@ -4,15 +4,15 @@ element의 DOMRect object를 얻는 hook입니다.
 
 ```jsx
 const useClientRect = () => {
-  const [rect, setRect] = useState(null);
+    const [rect, setRect] = useState(null);
 
-  const ref = useCallback((node) => {
-    if (node !== null) {
-      setRect(node.getBoundingClientRect());
-    }
-  }, []);
+    const ref = useCallback((node) => {
+        if (node !== null) {
+            setRect(node.getBoundingClientRect());
+        }
+    }, []);
 
-  return [rect, ref];
+    return [rect, ref];
 };
 ```
 
@@ -21,7 +21,7 @@ const useClientRect = () => {
 ## _usage_
 
 ```jsx
-import { useClientRect } from 'customHooks';
+import { useClientRect } from '@hooks';
 
 const [rect, ref] = useClientRect():
 

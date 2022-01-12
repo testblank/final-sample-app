@@ -1,5 +1,7 @@
-import { CardModuleThumb } from 'components/Card/Module';
-import 'style/index.css';
+import React from 'react';
+
+import { CardModuleThumb } from '@components/Card/Module';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/Card/Module',

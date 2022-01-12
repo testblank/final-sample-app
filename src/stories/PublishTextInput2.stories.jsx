@@ -1,3 +1,5 @@
+
+import React from 'react';
 import {
 	BaseInput,
 	MeasureInput,
@@ -6,9 +8,9 @@ import {
 	EmailInput,
 	SecretNumberInput,
 } from '@components/TextInput2';
-import { emailDomain } from 'data/mockup';
+import { emailDomain } from '@data/mockup';
 
-import 'style/index.css';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/TextInput2',

@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { useTextInput } from 'customHooks';
+import { useTextInput } from '@hooks';
 import { PrimaryInputPublish } from 'publish';
 
 const SecretNumberInput = (props) => {

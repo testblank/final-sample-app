@@ -1,4 +1,4 @@
-import { BaseImage } from 'components/Image';
+import { BaseImage } from '@components/Image';
 import {
   arrayOf,
   bool,
@@ -9,7 +9,7 @@ import {
   shape,
   string,
 } from 'prop-types';
-import { BaseCardPublish } from 'publish/Card';
+import { BaseCardPublish } from '@publish/Card';
 import React from 'react';
 import decimalSeparator from 'util/decimalSeparator';
 

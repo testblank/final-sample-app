@@ -1,8 +1,8 @@
 import { bool, element, func, number, oneOf, string } from 'prop-types';
 
-import { useTextInput } from 'customHooks';
-import ButtonPublish from 'publish/ButtonPublish2';
-import PrimaryInputPublish from 'publish/PrimaryInputPublish2';
+import { useTextInput } from '@hooks';
+import ButtonPublish from '@publish/ButtonPublish2';
+import PrimaryInputPublish from '@publish/PrimaryInputPublish2';
 
 const FuntionInput = (props) => {
   const [value, onChange] = useTextInput();

@@ -6,7 +6,7 @@
 ## _usage_
 
 ```jsx
-import LinearProgress from 'components/progress/LinearProgress';
+import LinearProgress from '@components/progress/LinearProgress';
 
 return <LinearPorgress type={'primary'} value={10} />;
 ```

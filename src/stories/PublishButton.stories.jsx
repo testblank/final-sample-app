@@ -1,12 +1,14 @@
-import { BaseButton, ImageButton } from 'components/Button';
-import 'style/index.css';
+import React from 'react';
+
+import { BaseButton, ImageButton } from '@components/Button';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/Button',
 	component: BaseButton,
 };
 
-const Template = (args) => {
+const Template = args => {
 	switch (args.type) {
 		case 'button':
 			return <BaseButton {...args} />;

@@ -2,9 +2,9 @@
 
 checkBox는 두가지 종류의 publish컴포넌트가 있습니다.
 
-- CheckBoxPublish2
-- CheckBoxWithLinkPublish
-- ~~CheckBoxWithLabelPublish~~
+-   CheckBoxPublish2
+-   CheckBoxWithLinkPublish
+-   ~~CheckBoxWithLabelPublish~~
 
 > 😨임의로 만들어 졌기 때문에 때문에 시안이 나오면 수정이 필요합니다.  
 > [useCheckTree](https://wire.lgcns.com/confluence/display/DS14560929Y2021/useCheckTree) hook은 해당 문서에서 확인 가능합니다.
@@ -47,37 +47,37 @@ CheckBox component는 property로 `withLink === true` 를 받을 경우
 ## _usage_
 
 ```jsx
-import { CheckBox } from 'components/CheckBox2';
-import { useCheckTree } from 'customHooks';
+import { CheckBox } from '@components/CheckBox2';
+import { useCheckTree } from '@hooks';
 
 const list = [
-  {
-    id: 0,
-    value: '약관 전체 동의',
-    desc: '',
-    checkAll: true,
-    checked: false,
-    required: false,
-  },
-  {
-    id: 6,
-    value: '마케팅 정보 수신동의 (선택)',
-    desc: '마케팅 목적을 위한 정보 수집에 대한 약관입니다.',
-    checked: false,
-    subIds: [77, 88],
-    subList: [
-      {
-        id: 77,
-        value: '이메일',
+    {
+        id: 0,
+        value: '약관 전체 동의',
+        desc: '',
+        checkAll: true,
         checked: false,
-      },
-      {
-        id: 88,
-        value: 'SMS',
+        required: false,
+    },
+    {
+        id: 6,
+        value: '마케팅 정보 수신동의 (선택)',
+        desc: '마케팅 목적을 위한 정보 수집에 대한 약관입니다.',
         checked: false,
-      },
-    ],
-  },
+        subIds: [77, 88],
+        subList: [
+            {
+                id: 77,
+                value: '이메일',
+                checked: false,
+            },
+            {
+                id: 88,
+                value: 'SMS',
+                checked: false,
+            },
+        ],
+    },
 ];
 
 const [checked, onChange] = useCheckTree(list);

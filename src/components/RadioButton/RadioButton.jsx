@@ -1,7 +1,7 @@
 import { arrayOf, bool, number, shape, string } from 'prop-types';
 
 import { RadioButtonPublish } from 'publish';
-import { useRadioButton } from 'customHooks';
+import { useRadioButton } from '@hooks';
 
 const RadioButton = ({ list }) => {
   const [selectedId, onClickRadioBtn] = useRadioButton(list);

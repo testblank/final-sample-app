@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { PrimaryInputPublish } from 'publish';
-import { useSelect, useTextInput } from 'customHooks';
-import { emailDomain } from 'data/mockup';
-import { SelectBox } from 'components/SelectBox';
+import { useSelect, useTextInput } from '@hooks';
+import { emailDomain } from '@data/mockup';
+import { SelectBox } from '@components/SelectBox';
 
 const EmailInput = (props) => {
   const { datas } = emailDomain;

@@ -5,18 +5,18 @@
 ## _usage_
 
 ```jsx
-import { BaseButton2 } from 'components/Button';
+import { BaseButton2 } from '@components/Button';
 
 return (
-  <BaseButton
-    text={'Button'}
-    onClick={() => {}}
-    disabled={false}
-    color={'primary'}
-    variant={'contained'}
-    size={'large'}
-    fullWidth={false}
-  />
+    <BaseButton
+        text={'Button'}
+        onClick={() => {}}
+        disabled={false}
+        color={'primary'}
+        variant={'contained'}
+        size={'large'}
+        fullWidth={false}
+    />
 );
 ```
 

@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-import { SampleSheetBody } from 'pages/SampleModal';
+import { SampleSheetBody } from 'sample-pages/SampleModal';
 import {
   useCallback,
   useEffect,

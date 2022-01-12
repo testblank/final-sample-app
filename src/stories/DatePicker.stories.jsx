@@ -1,4 +1,6 @@
-import { DatePicker } from 'components/DatePicker';
+import React from 'react';
+
+import { DatePicker } from '@components/DatePicker';
 
 export default {
 	title: 'Component/DatePicker',

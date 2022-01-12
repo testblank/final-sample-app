@@ -1,7 +1,7 @@
 import React from 'react';
 import { number, object, string } from 'prop-types';
 
-import { ThumbnailPublish } from 'publish/List/Thumbnail';
+import { ThumbnailPublish } from '@publish/List/Thumbnail';
 
 const Thumbnail = ({
   src = '',

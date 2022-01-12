@@ -5,7 +5,7 @@
 ## _usage_
 
 ```jsx
-import CircleProgress from 'components/progress/CircleProgress';
+import CircleProgress from '@components/progress/CircleProgress';
 
 return <CircleProgress type={'primary'}>;
 ```

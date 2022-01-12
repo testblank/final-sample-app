@@ -1,5 +1,7 @@
-import { ExpandableList } from 'components/ExpandableList';
-import 'style/index.css';
+import React from 'react';
+
+import { ExpandableList } from '@components/ExpandableList';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/ExpandableList',

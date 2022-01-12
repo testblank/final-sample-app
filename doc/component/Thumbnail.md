@@ -5,19 +5,19 @@ image, title, subTitle, desc 순으로 나열 되어 있습니다.
 ## _usage_
 
 ```jsx
-import { Thumbnail } from 'components/List/Thumbnail';
+import { Thumbnail } from '@components/List/Thumbnail';
 
 return (
-  <Thumbnail
-    src={''}
-    title={''}
-    subTitle={''}
-    desc={''}
-    imgWidth={124}
-    fontColor={'gray'}
-    className={''}
-    style={{}}
-  />
+    <Thumbnail
+        src={''}
+        title={''}
+        subTitle={''}
+        desc={''}
+        imgWidth={124}
+        fontColor={'gray'}
+        className={''}
+        style={{}}
+    />
 );
 ```
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, object, element, bool } from 'prop-types';
 
-import { BaseCardPublish } from 'publish/Card';
+import { BaseCardPublish } from '@publish/Card';
 
 const BaseCard = ({ bgClear, backgroundColor, children, style, className }) => {
   return (

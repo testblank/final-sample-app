@@ -1,5 +1,5 @@
 import { arrayOf, bool, func, shape, string } from 'prop-types';
-import { useSwitch } from 'customHooks';
+import { useSwitch } from '@hooks';
 import { SwitchPublish } from 'publish';
 
 const Switch = ({ list }) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { element, number, object, oneOf, oneOfType, string } from 'prop-types';
 
-import { CardModuleThumbPublish } from 'publish/Card/Module';
+import { CardModuleThumbPublish } from '@publish/Card/Module';
 
 const CardModuleThumb = ({
   src = '',

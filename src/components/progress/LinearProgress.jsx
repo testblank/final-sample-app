@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LinearProgressPublish from 'publish/progress/LinearProgressPublish';
+import LinearProgressPublish from '@publish/progress/LinearProgressPublish';
 
 const LinearProgress = ({ type = 'primary', value = 0 }) => {
   const barColor = `bg-${type}-500`;

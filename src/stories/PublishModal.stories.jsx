@@ -1,5 +1,7 @@
-import { SampleModal } from 'pages';
-import 'style/index.css';
+import React from 'react';
+
+import { SampleModal } from 'sample-pages';
+import 'styles/index.css';
 
 export default {
 	title: 'Modal/SampleModals',

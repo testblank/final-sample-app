@@ -1,9 +1,9 @@
 import React from 'react';
-import { SelectBox } from 'components/SelectBox';
-import { useSelect } from 'customHooks';
+import { SelectBox } from '@components/SelectBox';
+import { useSelect } from '@hooks';
 
-import { emailDomain } from 'data/mockup';
-import 'style/index.css';
+import { emailDomain } from '@data/mockup';
+import 'styles/index.css';
 
 export default {
 	title: 'Component/SelectBox',

@@ -1,7 +1,7 @@
 import { bool, element, func, number, oneOf, string } from 'prop-types';
 
-import { useTextInput } from 'customHooks';
-import PrimaryInputPublish from 'publish/PrimaryInputPublish2';
+import { useTextInput } from '@hooks';
+import PrimaryInputPublish from '@publish/PrimaryInputPublish2';
 
 const SecretInput = (props) => {
   const [value, onChange] = useTextInput('password');

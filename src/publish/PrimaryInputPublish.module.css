@@ -1,0 +1,11 @@
+.svgClose path {
+  fill: gray;
+}
+
+.svgCloseCaption path {
+  fill: red;
+}
+
+.svgEye path {
+  fill: gray;
+}

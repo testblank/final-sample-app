@@ -1,7 +1,7 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
-import BaseButton2 from 'components/Button/BaseButton2';
+import BaseButton2 from '@components/Button/BaseButton2';
 
-<Meta title='Component/button3' component={BaseButton2} />
+<Meta title="Component/button3" component={BaseButton2} />
 
 export const Template = (args) => <BaseButton2 {...args} />;
 
@@ -10,33 +10,33 @@ export const Template = (args) => <BaseButton2 {...args} />;
 CSF(Component Stroy Format) 에서 MDX(markdown with JSX)로 전환 테스트
 
 <Canvas>
-  <Story
-    name='Primary-contained'
-    args={{
-      text: 'Text',
-      onClick: () => {},
-      disabled: false,
-      color: 'primary',
-      variant: 'contained',
-      size: 'large',
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story
+        name="Primary-contained"
+        args={{
+            text: 'Text',
+            onClick: () => {},
+            disabled: false,
+            color: 'primary',
+            variant: 'contained',
+            size: 'large',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Canvas>
 
 <Canvas>
-  <Story
-    name='primary-outline'
-    args={{
-      text: 'Text',
-      onClick: () => {},
-      disabled: false,
-      color: 'primary',
-      variant: 'outline',
-      size: 'large',
-    }}
-  >
-    {Template.bind({})}
-  </Story>
+    <Story
+        name="primary-outline"
+        args={{
+            text: 'Text',
+            onClick: () => {},
+            disabled: false,
+            color: 'primary',
+            variant: 'outline',
+            size: 'large',
+        }}
+    >
+        {Template.bind({})}
+    </Story>
 </Canvas>

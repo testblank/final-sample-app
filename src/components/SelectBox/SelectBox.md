@@ -6,26 +6,26 @@
 ## _usage_
 
 ```jsx
-import { SelectBox } from 'components/SelectBox';
+import { SelectBox } from '@components/SelectBox';
 const options = [
-  {
-    id: 0,
-    value: '@naver.com',
-  },
-  {
-    id: 1,
-    value: '@gmail.com',
-  },
+    {
+        id: 0,
+        value: '@naver.com',
+    },
+    {
+        id: 1,
+        value: '@gmail.com',
+    },
 ];
 const [selected, onChangeSelect] = useSelect(options);
 
 return (
-  <SelectBox
-    options={options}
-    className={null}
-    selected={selected}
-    onChangeSelect={onChangeSelect}
-  />
+    <SelectBox
+        options={options}
+        className={null}
+        selected={selected}
+        onChangeSelect={onChangeSelect}
+    />
 );
 ```
 

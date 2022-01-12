@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonPublish2 from 'publish/ButtonPublish2';
+import ButtonPublish2 from '@publish/ButtonPublish2';
 import debounce from 'util/debounce';
 import PropTypes from 'prop-types';
 
