@@ -5,7 +5,8 @@ import Appbar from '@components/layouts/Appbar';
 
 import TitleBox from '@components/TitleBox';
 import Thumbnail from '@components/Thumbnail';
-import useLogger from '@modules/hooks/useLogger';
+// import useLogger from '@modules/hooks/useLogger';
+
 // import { CardTypeOne, CardTypeThree } from 'components/Card';
 // import { CardAccordion } from '@components/Accordion';
 
@@ -27,7 +28,7 @@ import {
 import Styles from '@styles/SvgStyle.module.css';
 import { CardTypeOne, CardTypeThree } from '@components/Card';
 import CardAccordion from '@components/Accordion';
-import useModal, { MODAL_TYPE } from '@modules/hooks/useModal';
+import useModal from '@modules/hooks/useModal';
 
 const thumbObjList = [
 	{
@@ -135,12 +136,18 @@ const thumbnailList = [
 const SampleMain = () => {
 	const { renderPage } = usePageLayout();
 
-	const { openDrawer, modalState } = useModal();
+	const { modalState, handleDrawer, handlePopup, handleSheet } = useModal();
 
-	console.log(modalState);
+	const handleClickMenu = () => {
+		handleDrawer(!modalState.drawer);
+	};
 
-	const handleOpenDrawer = () => {
-		openDrawer();
+	const handleClickNoti = () => {
+		handlePopup(!modalState.popup);
+	};
+
+	const handleClickDetail = () => {
+		handleSheet(!modalState.sheet);
 	};
 
 	const headerRender = () => {
@@ -164,8 +171,8 @@ const SampleMain = () => {
 			<Appbar
 				rightArea={rightArea}
 				leftArea={svgMenu(40, 40)}
-				cbOnClickLeft={handleOpenDrawer}
-			// cbOnClickRight={openPopup}
+				cbOnClickLeft={handleClickMenu}
+				cbOnClickRight={handleClickNoti}
 			/>
 		);
 	};
@@ -206,7 +213,7 @@ const SampleMain = () => {
 						</div>
 					}
 					btnStr={'자세히보기'}
-				// onClickBtn={() => openSheet()}
+					onClickBtn={handleClickDetail}
 				/>
 			</div>
 			<div

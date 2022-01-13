@@ -50,7 +50,7 @@ const CardAccordion = ({
 	}, [isOpen]);
 
 	return (
-		<BaseCard>
+		<BaseCard backgroundColor={'gray'}>
 			<div ref={refWrap} style={{ transition: `all 0.2s linear`, overflow: 'hidden' }}>
 				<div
 					ref={refMain}

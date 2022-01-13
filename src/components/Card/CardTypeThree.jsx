@@ -6,7 +6,7 @@ const CardTypeThree = ({
 	btnStr,
 	onClickBtn,
 	bgClear,
-	backgroundColor,
+	backgroundColor = 'gray',
 	style,
 	className,
 	// borderTopRight,

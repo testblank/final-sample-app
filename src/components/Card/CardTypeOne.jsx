@@ -23,7 +23,7 @@ const CardTypeOne = ({
 	lineHeight,
 	style,
 	className,
-	backgroundColor,
+	backgroundColor = 'gray',
 }) => {
 	const styleObj = {
 		width: '100%',

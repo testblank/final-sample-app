@@ -11,7 +11,7 @@ const CardTypeFour = ({
 	desc,
 	balance,
 	className,
-	backgroundColor,
+	backgroundColor = 'gray',
 }) => {
 	const styleObj = {
 		width: '100%',
@@ -31,7 +31,7 @@ const CardTypeFour = ({
 			<div className={`CardTypeFour flex justify-between`}>
 				<div
 					className={`flex flex-col flex-1 text-left`}
-					style={{ padding: '15px 0 19px' }}
+					style={{ padding: '15px 0 19px 16px' }}
 				>
 					<div className={'flex'} style={{ marginBottom: '4px' }}>
 						<div
@@ -52,7 +52,7 @@ const CardTypeFour = ({
 						{desc}
 					</div>
 				</div>
-				<div className={`flex items-center flex-none`}>
+				<div className={`flex items-center flex-none`} style={{ paddingRight: '16px' }}>
 					<div className={'balance'} style={{ marginRight: '8px' }}>
 						{decimalSeparator(balance)}
 						<span className={`text-gray-600`} style={{ marginLeft: '4px' }}>

@@ -19,7 +19,7 @@ const CardTypeTwo = ({
 	objList,
 	style,
 	className,
-	backgroundColor,
+	backgroundColor = 'gray',
 }) => {
 	const styleObj = {
 		width: '100%',
@@ -36,7 +36,7 @@ const CardTypeTwo = ({
 			className={`BaseCardPublish ${!bgClear ? `bg-${backgroundColor}-50` : ``} ${className || ''}`}
 			style={Object.assign(styleObj, style)}
 		>
-			<div>
+			<div style={{ padding: '0 16px' }}>
 				{objList &&
 					objList.length &&
 					objList.map((item, idx) => (

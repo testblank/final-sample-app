@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-	popupState: false,
-	sheetState: false,
-	drawerState: false,
+	popup: false,
+	sheet: false,
+	drawer: false,
 };
 
 const modalSlice = createSlice({
@@ -11,15 +11,13 @@ const modalSlice = createSlice({
 	initialState,
 	reducers: {
 		popup: (state, action) => {
-			state.popupState = action.payload;
+			state.popup = action.payload;
 		},
 		sheet: (state, action) => {
-			state.sheetState = action.payload;
+			state.sheet = action.payload;
 		},
 		drawer: (state, action) => {
-			console.log('state', state);
-			console.log('action', action);
-			state.drawerState = action.payload;
+			state.drawer = action.payload;
 		},
 	},
 });

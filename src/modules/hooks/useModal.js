@@ -14,19 +14,19 @@ const useModal = () => {
 	const modalState = useSelector(state => state.modal);
 	const dispatch = useDispatch();
 
-	const openPopup = useCallback(() => {
-		dispatch(modalActions.popup());
+	const handlePopup = useCallback(open => {
+		dispatch(modalActions.popup(open));
 	}, [dispatch]);
 
-	const openSheet = useCallback(() => {
-		dispatch(modalActions.sheet());
+	const handleSheet = useCallback(open => {
+		dispatch(modalActions.sheet(open));
 	}, [dispatch]);
 
-	const openDrawer = useCallback(() => {
-		dispatch(modalActions.drawer(true));
+	const handleDrawer = useCallback(open => {
+		dispatch(modalActions.drawer(open));
 	}, [dispatch]);
 
-	return { modalState, openPopup, openDrawer, openSheet };
+	return { modalState, handlePopup, handleSheet, handleDrawer };
 };
 
 export default useModal;
