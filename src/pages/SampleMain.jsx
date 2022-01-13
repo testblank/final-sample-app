@@ -5,6 +5,7 @@ import Appbar from '@components/layouts/Appbar';
 
 import TitleBox from '@components/TitleBox';
 import Thumbnail from '@components/Thumbnail';
+import useLogger from '@hooks/useLogger';
 // import { CardTypeOne, CardTypeThree } from 'components/Card';
 // import { CardAccordion } from '@components/Accordion';
 

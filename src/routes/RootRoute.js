@@ -13,7 +13,7 @@ const RootRoutes = () => (
 			path="/login"
 			element={
 				<GuestAuth>
-					<Home />
+					{/* <Home /> */}
 				</GuestAuth>
 			}
 		/>
@@ -22,18 +22,18 @@ const RootRoutes = () => (
 			path="/logout"
 			element={
 				<UserAuth>
-					<Home />
+					{/* <Home /> */}
 				</UserAuth>
 			}
 		/>
 
-		<Route path="/context" element={<Home />} />
+		<Route path="/context" element={null} />
 
-		<Route path="/conf" element={<Home />} />
+		<Route path="/conf" element={null} />
 
 		<Route path="/logger" element={<Logger />} />
 
-		<Route path="/error" element={<Home />} />
+		<Route path="/error" element={null} />
 	</Routes>
 );
 
