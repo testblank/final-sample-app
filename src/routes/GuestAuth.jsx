@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useLocation } from 'react-router';
 import PropTypes from 'prop-types';
-import useLogin from '@hooks/useLogin';
+import useLogin from '@modules/hooks/useLogin';
 
 const GuestAuth = ({ children }) => {
 	const location = useLocation();

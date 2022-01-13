@@ -1,4 +1,4 @@
-import { useWindowSize } from '@hooks';
+import { useWindowSize } from '@modules/hooks';
 import { arrayOf, element } from 'prop-types';
 import { number } from 'prop-types';
 

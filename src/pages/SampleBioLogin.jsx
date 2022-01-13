@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import PageTitle from 'components/Page/PageTitle';
+import PageTitle from '@components/Page/PageTitle';
 import { ReactComponent as SvgFingerPrint } from 'res/svg/finger-print.svg';
 import { Sheet } from 'modal/Sheet';
 import { useDispatch, useSelector } from 'react-redux';

@@ -17,6 +17,8 @@ const modalSlice = createSlice({
 			state.sheetState = action.payload;
 		},
 		drawer: (state, action) => {
+			console.log('state', state);
+			console.log('action', action);
 			state.drawerState = action.payload;
 		},
 	},

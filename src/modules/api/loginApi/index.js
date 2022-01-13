@@ -1,4 +1,4 @@
-import CommonApi from '@api/CommonApi';
+import CommonApi from '@modules/api/CommonApi';
 
 export const loginApi = () => CommonApi({
 	url: '/users',

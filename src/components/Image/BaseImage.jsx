@@ -76,11 +76,11 @@ const BaseImage = props => {
 				src={src}
 				alt={alt}
 				style={{
+					...style,
 					display: isLoad ? 'inline-block' : 'none',
 					width,
 					height,
 					objectFit: 'cover',
-					...style,
 				}}
 				className={`relative w-full h-full ${className}`}
 				onLoad={onLoadImage}

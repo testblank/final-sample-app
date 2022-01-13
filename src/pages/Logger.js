@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useLogger from '@hooks/useLogger';
+import useLogger from '@modules/hooks/useLogger';
 import loggerUtil from '@utils/loggerUtil';
 import _ from 'lodash-es';
 

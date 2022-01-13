@@ -5,7 +5,7 @@ import Appbar from '@components/layouts/Appbar';
 
 import TitleBox from '@components/TitleBox';
 import Thumbnail from '@components/Thumbnail';
-import useLogger from '@hooks/useLogger';
+import useLogger from '@modules/hooks/useLogger';
 // import { CardTypeOne, CardTypeThree } from 'components/Card';
 // import { CardAccordion } from '@components/Accordion';
 
@@ -27,6 +27,7 @@ import {
 import Styles from '@styles/SvgStyle.module.css';
 import { CardTypeOne, CardTypeThree } from '@components/Card';
 import CardAccordion from '@components/Accordion';
+import useModal, { MODAL_TYPE } from '@modules/hooks/useModal';
 
 const thumbObjList = [
 	{
@@ -134,6 +135,14 @@ const thumbnailList = [
 const SampleMain = () => {
 	const { renderPage } = usePageLayout();
 
+	const { openDrawer, modalState } = useModal();
+
+	console.log(modalState);
+
+	const handleOpenDrawer = () => {
+		openDrawer();
+	};
+
 	const headerRender = () => {
 		const rightArea = (
 			<div style={{ position: 'absolute' }}>
@@ -155,7 +164,7 @@ const SampleMain = () => {
 			<Appbar
 				rightArea={rightArea}
 				leftArea={svgMenu(40, 40)}
-			// cbOnClickLeft={openDrawer}
+				cbOnClickLeft={handleOpenDrawer}
 			// cbOnClickRight={openPopup}
 			/>
 		);
