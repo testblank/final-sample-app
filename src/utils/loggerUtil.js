@@ -25,6 +25,8 @@ function printLog(msg, obj, style) {
 		console.log(`%c ${msg}`, style);
 		console.log(obj);
 		console.groupEnd(unique);
+	} else if (_.isObjectLike(msg)) {
+		console.log(msg);
 	} else {
 		console.log(`%c ${msg}`, style);
 	}
