@@ -18,6 +18,7 @@ module.exports = {
 			'@stories': path.resolve(__dirname, 'src/stories/'),
 			'@styles': path.resolve(__dirname, 'src/styles/'),
 			'@utils': path.resolve(__dirname, 'src/utils/'),
+			'@icons': path.resolve(__dirname, 'src/icons/'),
 		},
 	},
 	style: {

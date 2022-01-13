@@ -11,6 +11,7 @@ module.exports = {
 		'object-curly-spacing': [2, 'always', { objectsInObjects: true }],
 		'linebreak-style': 0,
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		'no-unused-vars': 1,
 		// // ? allow both js and jsx filename
 		// 'react/jsx-filename-extension': [
 		// 	1,

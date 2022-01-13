@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _config from '../../config/tailwindConfig';
+import _config from '@/config/tailwindConfig';
 
 export const Color = ({ type, number, colorValue }) => (
 	<>

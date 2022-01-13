@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
-import { checkValidation } from 'util/validation';
+import { checkValidation } from 'utils/validation';
 
 // props: 'birth' | 'personalNum' | 'password' | 'email' | 'id' | 'number' | null
 

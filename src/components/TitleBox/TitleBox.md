@@ -7,16 +7,16 @@ title은 15자가 넘어가면 ...으로 표현합니다.
 ## _usage_
 
 ```jsx
-import { TitleBox } from '@components/TitleBox';
-import { svgIcon } from '@res/svg';
+import { TitleBox } from 'components/TitleBox';
+import { svgIcon } from 'res/svg';
 
 return (
-    <TitleBox
-        icon={svgIcon}
-        title={'최대 15자 들어갑니다'}
-        className={'font-medium text-20 text-gray-500'}
-        onClick={null}
-    />
+  <TitleBox
+    icon={svgIcon}
+    title={'최대 15자 들어갑니다'}
+    className={'font-medium text-20 text-gray-500'}
+    onClick={null}
+  />
 );
 ```
 

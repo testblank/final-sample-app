@@ -1,14 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { arrayOf, bool, number, object, oneOfType, shape, string } from 'prop-types';
+
 import { BaseCard, CardTypeFour, CardTypeTwo } from '@components/Card';
-import {
-	arrayOf,
-	bool,
-	number,
-	object,
-	oneOfType,
-	shape,
-	string,
-} from 'prop-types';
 
 const CardAccordion = ({
 	initOpen = true,
@@ -31,10 +24,8 @@ const CardAccordion = ({
 
 	useLayoutEffect(() => {
 		if (refSub) {
-			refMainHeight.current =
-				refMain.current.getBoundingClientRect().height;
-			refSubHeight.current =
-				refSub.current.getBoundingClientRect().height;
+			refMainHeight.current = refMain.current.getBoundingClientRect().height;
+			refSubHeight.current = refSub.current.getBoundingClientRect().height;
 		}
 	}, []);
 
@@ -60,18 +51,12 @@ const CardAccordion = ({
 
 	return (
 		<BaseCard>
-			<div
-				ref={refWrap}
-				style={{ transition: `all 0.2s linear`, overflow: 'hidden' }}
-			>
+			<div ref={refWrap} style={{ transition: `all 0.2s linear`, overflow: 'hidden' }}>
 				<div
 					ref={refMain}
-					className="main relative z-2"
+					className={`main relative z-2`}
 					style={{ transition: `all 0.2s linear` }}
 					onClick={onClickMain}
-					onKeyDown={() => {}}
-					role="button"
-					tabIndex={0}
 				>
 					<CardTypeFour
 						isOpen={isOpen}
@@ -83,7 +68,7 @@ const CardAccordion = ({
 				</div>
 				<div
 					ref={refSub}
-					className="sub relative z-1 opacity-1"
+					className={`sub relative z-1 opacity-1`}
 					style={{ transition: `all 0.2s linear` }}
 				>
 					<CardTypeTwo bgClear objList={subList} />
@@ -106,15 +91,6 @@ CardAccordion.propTypes = {
 			balance: number,
 		}),
 	),
-};
-
-CardAccordion.defaultProps = {
-	initOpen: true,
-	mainTitle: '',
-	mainNum: 0,
-	mainDesc: '',
-	mainBalance: 0,
-	subList: [],
 };
 
 export default CardAccordion;

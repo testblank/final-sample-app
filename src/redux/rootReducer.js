@@ -1,8 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { loginReducer } from '@redux/login/loginSlice';
+import { modalReducer } from '@redux/modal/modalSlice';
 
 const rootReducer = combineReducers({
-	loginReducer,
+	login: loginReducer,
+	modal: modalReducer,
 });
 
 export default rootReducer;

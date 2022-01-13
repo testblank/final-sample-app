@@ -10,13 +10,13 @@ calendar상단의 mm표시 부분 좌우 버튼을 누르면 각각 prev, next �
 import { DatePicker } from 'compnents/DatePicker';
 
 return (
-  <DatePicker
-    initialRegDate={Date.now()}
-    onClickDate={null}
-    onClickPrev={null}
-    onClickNext={null}
-    onSelectMonth={null}
-  />
+    <DatePicker
+        initialRegDate={Date.now()}
+        onClickDate={null}
+        onClickPrev={null}
+        onClickNext={null}
+        onSelectMonth={null}
+    />
 );
 ```
 
@@ -34,11 +34,11 @@ return (
 
 ```javascript
 const cbOnClickDate = (selectedDate) => {
-  if (Number(date) >= 1) {
-    setDate(selectedDate);
-    setRegDate(new Date(year, month, selectedDate));
-    onClickDate && onClickDate();
-  }
+    if (Number(date) >= 1) {
+        setDate(selectedDate);
+        setRegDate(new Date(year, month, selectedDate));
+        onClickDate && onClickDate();
+    }
 };
 ```
 
@@ -46,12 +46,12 @@ const cbOnClickDate = (selectedDate) => {
 
 ```javascript
 const cbOnClickPrev = () => {
-  const newMonth = month - 1;
-  const newRegDate = new Date(year, newMonth, 1);
+    const newMonth = month - 1;
+    const newRegDate = new Date(year, newMonth, 1);
 
-  setMonth(newMonth);
-  setRegDate(newRegDate);
-  onClickPrev && onClickPrev();
+    setMonth(newMonth);
+    setRegDate(newRegDate);
+    onClickPrev && onClickPrev();
 };
 ```
 
@@ -59,16 +59,16 @@ mm월 좌측의 `<` 버튼을 누르면 화면에 보여지는 mm월에 한 달�
 
 ```javascript
 const cbOnClickNext = () => {
-  const newMonth = month + 1;
-  const regDate = new Date(year, newMonth);
-  const today = new Date(refTodayYear.current, refTodayMonth.current);
+    const newMonth = month + 1;
+    const regDate = new Date(year, newMonth);
+    const today = new Date(refTodayYear.current, refTodayMonth.current);
 
-  if (regDate.getTime() <= today.getTime()) {
-    const newRegDate = new Date(year, newMonth, 1);
-    setMonth(newMonth);
-    setRegDate(newRegDate);
-    onClickNext && onClickNext();
-  }
+    if (regDate.getTime() <= today.getTime()) {
+        const newRegDate = new Date(year, newMonth, 1);
+        setMonth(newMonth);
+        setRegDate(newRegDate);
+        onClickNext && onClickNext();
+    }
 };
 ```
 
@@ -77,28 +77,28 @@ mm월 우측의 `>` 버튼을 누르면 화면에 보여지는 mm월에 한 달�
 
 ```javascript
 useEffect(() => {
-  const yearGap = refTodayYear.current - year;
-  const monthGap = refTodayMonth.current - month;
-  // 총 몇 달이 차이가 나는지
-  const gap = 12 * yearGap + monthGap;
+    const yearGap = refTodayYear.current - year;
+    const monthGap = refTodayMonth.current - month;
+    // 총 몇 달이 차이가 나는지
+    const gap = 12 * yearGap + monthGap;
 
-  const newDateList = [];
+    const newDateList = [];
 
-  for (let i = gap; i > 0; i--) {
-    newDateList.push({
-      date: new Date(year, month + i),
-      selected: regDate.getMonth() === month + i,
-    });
-  }
+    for (let i = gap; i > 0; i--) {
+        newDateList.push({
+            date: new Date(year, month + i),
+            selected: regDate.getMonth() === month + i,
+        });
+    }
 
-  for (let i = 0; i < 10; i++) {
-    newDateList.push({
-      date: new Date(year, month - i),
-      selected: regDate.getMonth() === month - i,
-    });
-  }
+    for (let i = 0; i < 10; i++) {
+        newDateList.push({
+            date: new Date(year, month - i),
+            selected: regDate.getMonth() === month - i,
+        });
+    }
 
-  setDateList(newDateList);
+    setDateList(newDateList);
 }, [regDate, year, month]);
 ```
 
@@ -119,44 +119,44 @@ regDate의 문자 표현은 `dateToYYYYMM(util/dateToYYYYMM)`함수의 리턴값
 ## makeDateList
 
 ```javascript
-import { makeDateList } from 'util/makeDateList';
+import { makeDateList } from 'utils/makeDateList';
 
 // regDate: number
 export const makeDateList = (regDate) => {
-  const today = new Date(regDate);
-  const year = today.getFullYear();
-  const month = today.getMonth();
-  const firstDay = new Date(year, month, 1);
-  const startIdx = firstDay.getDay();
+    const today = new Date(regDate);
+    const year = today.getFullYear();
+    const month = today.getMonth();
+    const firstDay = new Date(year, month, 1);
+    const startIdx = firstDay.getDay();
 
-  const leap = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  const ordinary = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const leap = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const ordinary = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-  // 윤년인지 먼저 계산 합니다.
-  let thisYear;
-  if (firstDay.getFullYear() % 4 === 0) {
-    thisYear = leap;
-  } else {
-    thisYear = ordinary;
-  }
+    // 윤년인지 먼저 계산 합니다.
+    let thisYear;
+    if (firstDay.getFullYear() % 4 === 0) {
+        thisYear = leap;
+    } else {
+        thisYear = ordinary;
+    }
 
-  // 매 월 1일 앞에 비워야할 칸 만큼 null값을 넣어줍니다.
-  const empties = [];
+    // 매 월 1일 앞에 비워야할 칸 만큼 null값을 넣어줍니다.
+    const empties = [];
 
-  for (let i = 0; i < startIdx; i++) {
-    empties.push(null);
-  }
+    for (let i = 0; i < startIdx; i++) {
+        empties.push(null);
+    }
 
-  // 월(month)에 맞는 일(date)의 갯수만큼 array를 채웁니다.
-  const dates = [];
+    // 월(month)에 맞는 일(date)의 갯수만큼 array를 채웁니다.
+    const dates = [];
 
-  for (let i = 1; i <= thisYear[month]; i++) {
-    dates.push(i);
-  }
+    for (let i = 1; i <= thisYear[month]; i++) {
+        dates.push(i);
+    }
 
-  // 빈array 뒤에 date가 들어있는 array를 합칩니다.
-  const dateList = empties.concat(dates);
+    // 빈array 뒤에 date가 들어있는 array를 합칩니다.
+    const dateList = empties.concat(dates);
 
-  return dateList;
+    return dateList;
 };
 ```
