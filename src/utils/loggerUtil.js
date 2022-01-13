@@ -55,11 +55,11 @@ function time(key) {
 }
 
 function timeEnd(key) {
-	if (_.isUndefined(timeMap(key))) {
+	if (_.isUndefined(timeMap.get(key))) {
 		warn(`${key} 값이 업습니다.`);
 		return;
 	}
-	info(timeMap.get(key) - _.now() / 6000);
+	info((_.now() - timeMap.get(key)) / 1000);
 }
 
 const loggerUtil = {
