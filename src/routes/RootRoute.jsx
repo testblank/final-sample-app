@@ -33,9 +33,7 @@ const RootRoutes = () => (
 		<Route
 			path="/logger"
 			element={
-				<UserAuth>
-					<Home />
-				</UserAuth>
+				<Home />
 			}
 		/>
 

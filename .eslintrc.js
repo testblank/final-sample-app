@@ -8,7 +8,7 @@ module.exports = {
 	parser: 'babel-eslint',
 	rules: {
 		'quotes': [2, 'single', { allowTemplateLiterals: true }],
-		'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
+		'object-curly-spacing': [2, 'always', { objectsInObjects: true }],
 		'linebreak-style': 0,
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		// // ? allow both js and jsx filename

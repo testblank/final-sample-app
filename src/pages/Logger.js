@@ -1,15 +1,36 @@
 import React, { useState } from 'react';
 import useLogger from '@hooks/useLogger';
 import loggerUtil from '@utils/loggerUtil';
+import _ from 'lodash-es';
+
+const testValue = {
+	a: '1',
+	b: [2, 3],
+	c: { d: '4', e: '5' },
+	f: { g: [5, 6], h: { i: { j: [7, 8] } } },
+};
 
 const Logger = () => {
 	const [count, setCount] = useState(0);
+	const [deepObj, setDeepObj] = useState(testValue);
 
 	const name = 'Logger';
 
 	useLogger(name, [count]);
 	const handleClickCount = () => {
 		setCount(count + 1);
+	};
+
+	useLogger('deep obj', [deepObj]);
+	const handleClickObj = () => {
+		const afterObj = {
+			a: '11',
+			b: [22, 3],
+			c: { d: '44', e: '5' },
+			f: { g: [5, 66], h: { i: { j: [_.random(0, 100)] } } },
+		};
+
+		setDeepObj(afterObj);
 	};
 
 	const timeKey = 'test';
@@ -24,20 +45,15 @@ const Logger = () => {
 
 	return (
 		<div className="Logger">
-			<input
-				type="button"
-				value="update count"
-				onClick={handleClickCount}
-			/>
+			<input type="button" value="update count" onClick={handleClickCount} />
 			<br />
 			{count}
 			<br />
+			<input type="button" value="update deep obj" onClick={handleClickObj} />
 			<br />
-			<input
-				type="button"
-				value="update seconds"
-				onClick={handleClickSeconds}
-			/>
+			<br />
+			<br />
+			<input type="button" value="update seconds" onClick={handleClickSeconds} />
 		</div>
 	);
 };

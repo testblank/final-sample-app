@@ -1,4 +1,4 @@
-import { isObject, uniqueId, now, isUndefined } from 'lodash-es';
+import _ from 'lodash-es';
 
 const levels = {
 	error: 0,
@@ -6,58 +6,58 @@ const levels = {
 	info: 2,
 };
 
-const level = levels.info;
-const timeMap = new Map();
-
 const styles = {
-	info: ['color: green', 'background: white', 'font-size: 10px', 'border: 1px solid gray', 'padding: 1px'].join(';'),
+	info: ['color: green', 'background: white', 'font-size: 13px', 'border: 1px solid gray', 'padding: 2px'].join(';'),
 
-	warn: ['color: orange', 'background: white', 'font-size: 11px', 'border: 1px solid orange', 'padding: 2px'].join(';'),
+	warn: ['color: yellow', 'background: yellow', 'font-size: 13px', 'border: 1px solid gray', 'padding: 2px'].join(';'),
 
-	error: ['color: red', 'background: white', 'font-size: 13px', 'border: 1px solid red', 'padding: 2px'].join(';'),
+	error: ['color: red', 'background: red', 'font-size: 13px', 'border: 1px solid red', 'padding: 2px'].join(';'),
 };
 
+const level = 2;
+const timeMap = new Map();
+
 function printLog(msg, obj, style) {
-	if (isObject(obj)) {
-		const unique = uniqueId();
+	if (_.isObject(obj)) {
+		const unique = _.uniqueId();
 
 		console.group(unique);
-		console.log(`%c${msg}`, style);
+		console.log(`%c ${msg}`, style);
 		console.log(obj);
 		console.groupEnd(unique);
 	} else {
-		console.log(`%c${msg}`, style);
+		console.log(`%c ${msg}`, style);
 	}
 }
 
 function info(msg, obj) {
-	if (level >= levels.info) {
+	if (level <= levels.info) {
 		printLog(msg, obj, styles.info);
 	}
 }
 
 function warn(msg, obj) {
-	if (level >= levels.warn) {
-		printLog(msg, obj, styles.warn);
+	if (level <= levels.warn) {
+		printLog(msg, obj, styles.info);
 	}
 }
 
 function error(msg, obj) {
-	if (level >= levels.error) {
-		printLog(msg, obj, styles.error);
+	if (level <= levels.error) {
+		printLog(msg, obj, styles.info);
 	}
 }
 
 function time(key) {
-	timeMap.set(key, now());
+	timeMap.set(key, _.now());
 }
 
 function timeEnd(key) {
-	if (isUndefined(timeMap.get(key))) {
+	if (_.isUndefined(timeMap(key))) {
 		warn(`${key} 값이 업습니다.`);
 		return;
 	}
-	info((now() - timeMap.get(key)) / 1000);
+	info(timeMap.get(key) - _.now() / 6000);
 }
 
 const loggerUtil = {
