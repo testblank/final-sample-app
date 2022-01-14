@@ -6,7 +6,7 @@ import './App.css';
 
 const App = () => (
 	<div className="App">
-		<Header />
+		{/* <Header /> */}
 		<RootRoute />
 	</div>
 );
