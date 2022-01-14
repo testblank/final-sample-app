@@ -26,7 +26,6 @@ const borderColorPlugin = ({ addUtilities, e, theme, variants }) => {
 module.exports = {
 	// mode: 'jit', // just in time mode https://tailwindcss.com/docs/just-in-time-mode#enabling-jit-mode
 	plugins: [borderColorPlugin],
-	// purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
 	purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
 	// darkMode: 'class', // or 'media' or 'class'
 	theme: {

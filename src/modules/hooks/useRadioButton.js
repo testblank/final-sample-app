@@ -16,7 +16,7 @@ const useRadioButton = list => {
 	const initialSelectedId = getSelectedId(list);
 	const [selectedId, setSelectedId] = useState(initialSelectedId);
 
-	const onClickRadioBtn = id => {
+	const onClickRadioBtn = (id) => {
 		if (id !== selectedId) {
 			setSelectedId(id);
 		}

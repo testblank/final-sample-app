@@ -11,7 +11,7 @@ module.exports = {
 			'@routes': path.resolve(__dirname, 'src/routes/'),
 			'@styles': path.resolve(__dirname, 'src/styles/'),
 			'@utils': path.resolve(__dirname, 'src/utils/'),
-			'@icons': path.resolve(__dirname, 'src/icons/'),
+			'@assets': path.resolve(__dirname, 'src/assets/'),
 		},
 	},
 	style: {
@@ -19,13 +19,13 @@ module.exports = {
 			plugins: [require('tailwindcss'), require('autoprefixer')],
 		},
 		// webpack: {
-		//   configure: (config, { env, paths }) => {
-		//     config.module.rules.push({
-		//       test: /\.svg$/,
-		//       use: ['@svgr/webpack'],
-		//     });
-		//     return config;
-		//   },
+		// 	configure: (config, { env, paths }) => {
+		// 		config.module.rules.push({
+		// 			test: /\.svg$/,
+		// 			use: ['@svgr/webpack'],
+		// 		});
+		// 		return config;
+		// 	},
 		// },
 	},
 };

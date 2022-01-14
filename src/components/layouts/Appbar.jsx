@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as ImgBack } from '@icons/icons-back.svg';
+import { ReactComponent as ImgBack } from '@assets/icons/icons-back.svg';
 
 const Appbar = ({
 	backgroundColor = 'white',

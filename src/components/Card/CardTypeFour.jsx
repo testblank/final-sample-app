@@ -1,5 +1,5 @@
 import React, { bool, number, object, oneOfType, string } from 'prop-types';
-import { svgDown } from '@icons';
+import { svgDown } from '@assets/icons';
 import decimalSeparator from '@utils/decimalSeparator';
 
 const CardTypeFour = ({

@@ -19,7 +19,7 @@ import {
 	svgPerson,
 	svgSH,
 	svgShare,
-} from '@icons/index';
+} from '@assets/icons/index';
 import Styles from '@styles/SvgStyle.module.css';
 import { CardTypeOne, CardTypeThree } from '@components/Card';
 import CardAccordion from '@components/Accordion';
@@ -179,7 +179,7 @@ const SampleMain = () => {
 				leftArea={svgMenu(40, 40)}
 				cbOnClickLeft={handleClickMenu}
 				cbOnClickRight={handleClickNoti}
-				// titleArea={<Header />}
+			// titleArea={<Header />}
 			/>
 		);
 	};
