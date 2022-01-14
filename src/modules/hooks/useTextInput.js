@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
-import { checkValidation } from 'utils/validation';
+import checkValidation from '@utils/validation';
 
 // props: 'birth' | 'personalNum' | 'password' | 'email' | 'id' | 'number' | null
 
@@ -73,8 +73,8 @@ const useTextInput = (props = null) => {
 		const onlyNumber = targetValue.replace(/[^0-9]/g, '');
 
 		refPersonalNumArr &&
-      refPersonalNumArr.current &&
-      refPersonalNumArr.current.push(onlyNumber);
+			refPersonalNumArr.current &&
+			refPersonalNumArr.current.push(onlyNumber);
 
 		if (refMaskingValue && refMaskingValue.current) {
 			if (refMaskingValue.current.length < 1) {
@@ -119,9 +119,9 @@ const useTextInput = (props = null) => {
 				case 'email':
 					emailCheck(targetValue);
 					break;
-					// case 'id':
-					//   idCheck(targetValue);
-					//   break;
+				// case 'id':
+				//   idCheck(targetValue);
+				//   break;
 				case 'number':
 					setValue(targetValue.replace(/[^0-9]/g, ''));
 					break;

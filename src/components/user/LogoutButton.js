@@ -7,7 +7,7 @@ const style = {
 };
 const LogoutButton = () => {
 	const handleClick = () => {
-		console.log('로그아웃');
+		// console.log('로그아웃');
 	};
 
 	return (

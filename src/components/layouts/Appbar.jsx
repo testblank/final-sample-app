@@ -1,23 +1,20 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
 import { ReactComponent as ImgBack } from '@icons/icons-back.svg';
 
-const Appbar = props => {
-	const {
-		backgroundColor = 'white',
-		// type,
-		leftArea = <ImgBack />,
-		titleArea,
-		rightArea,
-		rightArea2,
-		cbOnClickLeft,
-		cbOnClickRight,
-		cbOnClickRight2,
-		className,
-		children,
-	} = props;
-
+const Appbar = ({
+	backgroundColor = 'white',
+	// type,
+	leftArea = <ImgBack />,
+	titleArea,
+	rightArea,
+	rightArea2,
+	cbOnClickLeft,
+	cbOnClickRight,
+	cbOnClickRight2,
+	className,
+	children,
+}) => {
 	const onClickLeft = () => {
 		cbOnClickLeft && cbOnClickLeft();
 	};
@@ -79,7 +76,7 @@ Appbar.propTypes = {
 	backgroundColor: PropTypes.string,
 	// type: PropTypes.oneOf(['page', 'modal', 'none']).isRequired,
 	leftArea: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number]),
-	titleArea: PropTypes.string,
+	titleArea: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number]),
 	rightArea: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number]),
 	rightArea2: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number]),
 	cbOnClickLeft: PropTypes.func,

@@ -6,6 +6,8 @@ import useSelect from './useSelect';
 import useSwitch from './useSwitch';
 import useWindowSize from './useWindowSize';
 import useClientRect from './useClientRect';
+import useLogin from './useLogin';
+import useModal from './useModal';
 
 export {
 	// useCheckBox,
@@ -16,4 +18,6 @@ export {
 	useSwitch,
 	useWindowSize,
 	useClientRect,
+	useLogin,
+	useModal,
 };

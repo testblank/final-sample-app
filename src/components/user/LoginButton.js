@@ -7,7 +7,7 @@ const style = {
 };
 const LoginButton = () => {
 	const handleClick = () => {
-		console.log('로그인');
+		// console.log('로그인');
 	};
 
 	return (

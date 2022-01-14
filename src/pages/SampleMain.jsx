@@ -5,14 +5,9 @@ import Appbar from '@components/layouts/Appbar';
 
 import TitleBox from '@components/TitleBox';
 import Thumbnail from '@components/Thumbnail';
-// import useLogger from '@modules/hooks/useLogger';
-
-// import { CardTypeOne, CardTypeThree } from 'components/Card';
-// import { CardAccordion } from '@components/Accordion';
-
-// import { Popup } from 'modal/Popup';
-// import { Sheet } from 'modal/Sheet';
-// import { Drawer } from 'modal/Drawer';
+import { Popup } from '@components/modal/Popup';
+import { Sheet } from '@components/modal/Sheet';
+import { Drawer } from '@components/modal/Drawer';
 import {
 	svgMenu,
 	svgNoti,
@@ -29,6 +24,8 @@ import Styles from '@styles/SvgStyle.module.css';
 import { CardTypeOne, CardTypeThree } from '@components/Card';
 import CardAccordion from '@components/Accordion';
 import useModal from '@modules/hooks/useModal';
+import Nav from '@routes/Nav';
+import Header from '@components/layouts/Header';
 
 const thumbObjList = [
 	{
@@ -139,15 +136,15 @@ const SampleMain = () => {
 	const { modalState, handleDrawer, handlePopup, handleSheet } = useModal();
 
 	const handleClickMenu = () => {
-		handleDrawer(!modalState.drawer);
+		handleDrawer(true);
 	};
 
 	const handleClickNoti = () => {
-		handlePopup(!modalState.popup);
+		handlePopup(true);
 	};
 
 	const handleClickDetail = () => {
-		handleSheet(!modalState.sheet);
+		handleSheet(true);
 	};
 
 	const headerRender = () => {
@@ -173,6 +170,7 @@ const SampleMain = () => {
 				leftArea={svgMenu(40, 40)}
 				cbOnClickLeft={handleClickMenu}
 				cbOnClickRight={handleClickNoti}
+			// titleArea={<Header />}
 			/>
 		);
 	};
@@ -289,12 +287,51 @@ const SampleMain = () => {
 		</div>
 	);
 
+	const popupRender = () =>
+		<Popup />;
+
+	const sheetRender = () =>
+		<Sheet>
+			<div>
+				<div>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
+					magnam! Saepe ad inventore, hic porro magni minima distinctio
+					adipisci, itaque perspiciatis amet mollitia.
+				</div>
+				<div>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
+					magnam! Saepe ad inventore, hic porro magni minima distinctio
+					adipisci, itaque perspiciatis amet mollitia.
+				</div>
+				<div>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
+					magnam! Saepe ad inventore, hic porro magni minima distinctio
+					adipisci, itaque perspiciatis amet mollitia.
+				</div>
+				<div>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
+					magnam! Saepe ad inventore, hic porro magni minima distinctio
+					adipisci, itaque perspiciatis amet mollitia.
+				</div>
+			</div>
+		</Sheet>;
+
+	const drawerRender = () => (
+		<Drawer>
+			<Nav />
+		</Drawer>
+	);
+
 	return renderPage({
 		header: headerRender(),
 		body: bodyRender(),
-		// popup: <Popup />,
-		// sheet: <Sheet />,
-		// drawer: <Drawer />,
+		popup: popupRender(),
+		sheet: sheetRender(),
+		drawer: drawerRender(),
 	});
 };
 
