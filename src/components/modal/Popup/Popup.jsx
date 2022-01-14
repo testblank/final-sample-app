@@ -27,15 +27,12 @@ const Popup = ({
 		refPopup.current.classList.add(Styles.hidePopup);
 
 		refTimeoutStyle.current = setTimeout(() => {
-			refDim &&
-				refDim.current &&
-				refDim.current.classList.remove(Styles.hideDim);
+			refDim && refDim.current && refDim.current.classList.remove(Styles.hideDim);
 			refPopup.current.classList.remove(Styles.hidePopup);
 		}, 200);
 	};
 
-
-	const handleOnClick = e => {
+	const handleOnClick = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 		closingStyle();
@@ -46,7 +43,7 @@ const Popup = ({
 		onClick && onClick();
 	};
 
-	const handleOnClickCancel = e => {
+	const handleOnClickCancel = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
 		closingStyle();
@@ -61,10 +58,13 @@ const Popup = ({
 		onClickCancel && onClickCancel();
 	};
 
-	useEffect(() => () => {
-		refTimeoutStyle.current && clearTimeout(refTimeoutStyle.current);
-		refTimeoutState.current && clearTimeout(refTimeoutState.current);
-	}, []);
+	useEffect(
+		() => () => {
+			refTimeoutStyle.current && clearTimeout(refTimeoutStyle.current);
+			refTimeoutState.current && clearTimeout(refTimeoutState.current);
+		},
+		[],
+	);
 
 	return (
 		<div
@@ -88,8 +88,7 @@ const Popup = ({
 					marginBottom: '16px',
 					justifyContent: 'space-between',
 					touchAction: 'none',
-					boxShadow:
-						'0px 0px 2px rgba(0, 0, 0, 0.22), 0px 7px 10px rgba(0, 0, 0, 0.12)',
+					boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.22), 0px 7px 10px rgba(0, 0, 0, 0.12)',
 				}}
 			>
 				{titleStr && titleStr.length > 0 ? (
@@ -117,7 +116,8 @@ const Popup = ({
 					}}
 				>
 					<div>
-						{messageStr || `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla vel
+						{messageStr ||
+							`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla vel
               placeat ea consequuntur tempore praesentium laudantium at accusantium
               qui? Quidem nulla eius quam optio deleniti voluptatem dolorum alias ea
               a? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla vel

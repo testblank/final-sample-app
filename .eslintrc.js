@@ -4,7 +4,7 @@ module.exports = {
 		es6: true,
 		node: true,
 	},
-	extends: ['naver', 'plugin:react/recommended'],
+	extends: ['naver', 'plugin:react/recommended', 'prettier'],
 	parser: 'babel-eslint',
 	rules: {
 		'quotes': [2, 'single', { allowTemplateLiterals: true }],

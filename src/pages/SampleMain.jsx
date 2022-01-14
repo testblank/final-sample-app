@@ -36,7 +36,8 @@ const thumbObjList = [
 				<span className={`text-blue-500`}>26</span>
 			</div>
 		),
-	}, {
+	},
+	{
 		src: svgFinance(36, 36, Styles.svgFillWhite),
 		title: (
 			<div>
@@ -44,7 +45,8 @@ const thumbObjList = [
 				<span className={`text-blue-500`}>4</span>
 			</div>
 		),
-	}, {
+	},
+	{
 		src: svgShare(36, 36, Styles.svgFillWhite),
 		title: (
 			<div>
@@ -52,7 +54,8 @@ const thumbObjList = [
 				<span className={`text-blue-500`}>1</span>
 			</div>
 		),
-	}, {
+	},
+	{
 		src: svgLocation(36, 36, Styles.svgFillWhite),
 		title: (
 			<div>
@@ -68,7 +71,8 @@ const bankList = [
 		imgSrc: svgHN(40, 40),
 		bankName: '국민은행',
 		balance: 100000000,
-	}, {
+	},
+	{
 		imgSrc: svgKB(40, 40),
 		bankName: '은행명이 들갑니다',
 		balance: 100000000,
@@ -88,7 +92,8 @@ const cardList = [
 		imgSrc: svgHN(40, 40),
 		bankName: '국민은행',
 		balance: 100000000,
-	}, {
+	},
+	{
 		imgSrc: svgSH(40, 40),
 		bankName: '은행명이 들갑니다',
 		balance: 100000000,
@@ -101,27 +106,32 @@ const thumbnailList = [
 		title: 'G마켓',
 		subTitle: '30% 할인혜택제공',
 		desc: '상세설명이 들어갑니다',
-	}, {
+	},
+	{
 		src: 'https://dummyimage.com/400x400/4997c8/fff.jpg&text=W',
 		title: '우리카드',
 		subTitle: '10만원 제공',
 		desc: '가족정보 제공 시',
-	}, {
+	},
+	{
 		src: 'https://dummyimage.com/400x400/fd8000/fff.jpg&text=H',
 		title: '한화생명',
 		subTitle: '스타벅스 상품권',
 		desc: '관심사 및 일',
-	}, {
+	},
+	{
 		src: 'https://dummyimage.com/400x400/41d241/fff.jpg&text=G',
 		title: 'G마켓',
 		subTitle: '30% 할인혜택제공',
 		desc: '상세설명이 들어갑니다',
-	}, {
+	},
+	{
 		src: 'https://dummyimage.com/400x400/4997c8/fff.jpg&text=W',
 		title: '우리카드',
 		subTitle: '10만원 제공',
 		desc: '가족정보 제공 시',
-	}, {
+	},
+	{
 		src: 'https://dummyimage.com/400x400/fd8000/fff.jpg&text=H',
 		title: '한화생명',
 		subTitle: '스타벅스 상품권',
@@ -129,11 +139,10 @@ const thumbnailList = [
 	},
 ];
 
-
 const SampleMain = () => {
 	const { renderPage } = usePageLayout();
 
-	const { modalState, handleDrawer, handlePopup, handleSheet } = useModal();
+	const { handleDrawer, handlePopup, handleSheet } = useModal();
 
 	const handleClickMenu = () => {
 		handleDrawer(true);
@@ -170,7 +179,7 @@ const SampleMain = () => {
 				leftArea={svgMenu(40, 40)}
 				cbOnClickLeft={handleClickMenu}
 				cbOnClickRight={handleClickNoti}
-			// titleArea={<Header />}
+				// titleArea={<Header />}
 			/>
 		);
 	};
@@ -185,14 +194,8 @@ const SampleMain = () => {
 				<br />
 				김엘지님(로그인 성공 시)
 			</div>
-			<div
-				className={'title'}
-				style={{ marginBottom: '16px', padding: '0 16px' }}
-			>
-				<TitleBox
-					title={'내 데이터'}
-					icon={svgData(30, 30)}
-				/>
+			<div className={'title'} style={{ marginBottom: '16px', padding: '0 16px' }}>
+				<TitleBox title={'내 데이터'} icon={svgData(30, 30)} />
 			</div>
 			<div style={{ marginBottom: '16px', padding: '0 16px' }}>
 				<CardTypeOne
@@ -214,14 +217,8 @@ const SampleMain = () => {
 					onClickBtn={handleClickDetail}
 				/>
 			</div>
-			<div
-				className={'title'}
-				style={{ paddingBottom: '16px', padding: '0 16px' }}
-			>
-				<TitleBox
-					title={'내 금융'}
-					icon={svgData(30, 30)}
-				/>
+			<div className={'title'} style={{ paddingBottom: '16px', padding: '0 16px' }}>
+				<TitleBox title={'내 금융'} icon={svgData(30, 30)} />
 			</div>
 			<div style={{ marginBottom: '24px', padding: '0 16px' }}>
 				<CardAccordion
@@ -262,13 +259,8 @@ const SampleMain = () => {
 					btnStr={'자세히보기'}
 				/>
 			</div>
-			<div
-				className={'title'}
-				style={{ marginBottom: '16px', padding: '0 16px' }}
-			>
-				<TitleBox
-					title={'김엘지님을 위한 추천혜택'}
-				/>
+			<div className={'title'} style={{ marginBottom: '16px', padding: '0 16px' }}>
+				<TitleBox title={'김엘지님을 위한 추천혜택'} />
 			</div>
 			<div className={`flex overflow-x-scroll`} style={{ padding: '0 16px' }}>
 				{thumbnailList.map((item, idx) => (
@@ -278,47 +270,41 @@ const SampleMain = () => {
 						title={item.title}
 						subTitle={item.subTitle}
 						desc={item.desc}
-						style={
-							thumbnailList.length - 1 !== idx ? { marginRight: '16px' } : {}
-						}
+						style={thumbnailList.length - 1 !== idx ? { marginRight: '16px' } : {}}
 					/>
 				))}
 			</div>
 		</div>
 	);
 
-	const popupRender = () =>
-		<Popup />;
+	const popupRender = () => <Popup />;
 
-	const sheetRender = () =>
+	const sheetRender = () => (
 		<Sheet>
 			<div>
 				<div>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
-					magnam! Saepe ad inventore, hic porro magni minima distinctio
-					adipisci, itaque perspiciatis amet mollitia.
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aut sapiente
+					libero consequuntur ex eveniet, dignissimos magnam! Saepe ad inventore, hic
+					porro magni minima distinctio adipisci, itaque perspiciatis amet mollitia.
 				</div>
 				<div>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
-					magnam! Saepe ad inventore, hic porro magni minima distinctio
-					adipisci, itaque perspiciatis amet mollitia.
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aut sapiente
+					libero consequuntur ex eveniet, dignissimos magnam! Saepe ad inventore, hic
+					porro magni minima distinctio adipisci, itaque perspiciatis amet mollitia.
 				</div>
 				<div>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
-					magnam! Saepe ad inventore, hic porro magni minima distinctio
-					adipisci, itaque perspiciatis amet mollitia.
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aut sapiente
+					libero consequuntur ex eveniet, dignissimos magnam! Saepe ad inventore, hic
+					porro magni minima distinctio adipisci, itaque perspiciatis amet mollitia.
 				</div>
 				<div>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Quam aut sapiente libero consequuntur ex eveniet, dignissimos
-					magnam! Saepe ad inventore, hic porro magni minima distinctio
-					adipisci, itaque perspiciatis amet mollitia.
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam aut sapiente
+					libero consequuntur ex eveniet, dignissimos magnam! Saepe ad inventore, hic
+					porro magni minima distinctio adipisci, itaque perspiciatis amet mollitia.
 				</div>
 			</div>
-		</Sheet>;
+		</Sheet>
+	);
 
 	const drawerRender = () => (
 		<Drawer>
