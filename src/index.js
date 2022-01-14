@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '@styles/index.css';
 import { BrowserRouter } from 'react-router-dom';
+import '@styles/index.css';
+import VConsole from 'vconsole';
 
 import { Provider } from 'react-redux';
 import store from '@modules/redux/configureStore';
 import App from './App';
+
+const vConsole = new VConsole({ theme: 'dark' });
 
 ReactDOM.render(
 	<React.StrictMode>
