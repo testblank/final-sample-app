@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import useLogger from '@modules/hooks/useLogger';
 import loggerUtil from '@utils/loggerUtil';
-import _ from 'lodash-es';
+import _ from '@utils/lodashUtil';
 
 const testValue = {
 	a: '1',
@@ -11,6 +12,8 @@ const testValue = {
 };
 
 const Logger = () => {
+	const loginData = useSelector(state => state.login);
+
 	const [count, setCount] = useState(0);
 	const [deepObj, setDeepObj] = useState(testValue);
 
@@ -45,6 +48,8 @@ const Logger = () => {
 
 	return (
 		<div className="Logger">
+			{loginData.userInfo && loginData.userInfo.userName}
+			<br />
 			<input type="button" value="update count" onClick={handleClickCount} />
 			<br />
 			{count}

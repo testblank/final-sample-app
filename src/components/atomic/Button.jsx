@@ -5,7 +5,7 @@ const Button = ({ children, onClick, style, className }) => {
 	const handleOnClick = (e) => {
 		e.preventDefault();
 		if (onClick) {
-			onClick();
+			onClick(e);
 		}
 		// onClick && onClick();
 	};
@@ -31,7 +31,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	children: null,
-	onClick: () => {},
+	onClick: () => { },
 	style: null,
 	className: null,
 };

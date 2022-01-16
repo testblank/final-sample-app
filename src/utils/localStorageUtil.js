@@ -1,35 +1,24 @@
-import _ from 'lodash-es';
+import _ from '@utils/lodashUtil';
 
-function _.isDefinedLocalStorage() {
-	if (_.isNil(localStorage)) {
+function isDefinedLocalStorage(key) {
+	if (_.isNil(localStorage) || !_.isString(key)) {
 		return false;
 	}
 	return true;
 }
 
-function getItem(key, defaultValue) {
-	if (_.isDefinedLocalStorage() === false) {
-		throw new Error('localStorage 존재하지 않음.');
-	}
-
-	if (_.isNil(key) || !_.isString(key)) {
+function getItem(key) {
+	if (!isDefinedLocalStorage(key)) {
 		return '';
 	}
 
 	const returnValue = localStorage.getItem(key);
 
-	if (_.isNull(returnValue)) {
-		return defaultValue;
-	}
-	return returnValue;
+	return returnValue ?? '';
 }
 
 function setItem(key, value) {
-	if (_.isDefinedLocalStorage() === false) {
-		throw new Error('localStorage 존재하지 않음.');
-	}
-
-	if (_.isNil(key) || !_.isString(key)) {
+	if (!isDefinedLocalStorage(key)) {
 		return;
 	}
 
@@ -37,11 +26,7 @@ function setItem(key, value) {
 }
 
 function removeItem(key) {
-	if (_.isDefinedLocalStorage() === false) {
-		throw new Error('localStorage 존재하지 않음.');
-	}
-
-	if (_.isNil(key) || !_.isString(key)) {
+	if (!isDefinedLocalStorage(key)) {
 		return;
 	}
 

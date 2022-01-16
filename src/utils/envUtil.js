@@ -1,4 +1,7 @@
-import _ from 'lodash-es';
+import _ from '@utils/lodashUtil';
+import loggerUtil from '@utils/loggerUtil';
+import logger from 'redux-logger';
+
 
 /**
  * import envUtil from '@utils/envUtil';
@@ -6,22 +9,20 @@ import _ from 'lodash-es';
  */
 function getEnvByKey(key) {
 	if (_.isNil(process)) {
-		throw new Error('process 존재하지 않음.');
+		loggerUtil.warn('process 존재하지 않음');
+		return '';
 	}
 
 	if (_.isNil(process.env)) {
-		throw new Error('process.env 존재하지 않음.');
-	}
-
-	if (_.isNil(key) && !_.isString(key)) {
+		loggerUtil.warn('process.env 존재하지 않음');
 		return '';
 	}
 
-	if (_.isUndefined(process.env[key])) {
+	if (!_.isString(key)) {
 		return '';
 	}
 
-	return process.env[key];
+	return process.env[key] ?? '';
 }
 
 const envUtil = {

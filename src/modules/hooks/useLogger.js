@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import _ from 'lodash-es';
+import _ from '@utils/lodashUtil';
 import loggerUtil from '@utils/loggerUtil';
 
 const replaceAllBackSlash = targetStr => {
@@ -90,9 +90,13 @@ const compare = (a, b) => {
 
 
 const useLogger = (componentName, array) => {
+
 	useEffect(() => {
 		loggerUtil.info(`${componentName} mounted`, array);
+
 		return () => loggerUtil.info(`${componentName} unmounted`);
+
+
 	}, []);
 
 	const beforeValue = useRef(null);
